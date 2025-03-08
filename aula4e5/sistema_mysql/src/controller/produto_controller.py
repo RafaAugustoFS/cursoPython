@@ -10,9 +10,9 @@ def listar_produtos():
 def cadastrar_produto(nome, preco):
     """ Cadastrar produto no banco """
     model = ProdutoModel()
-    novo_id = model.insert_product(nome, preco)
+    novo_produto = model.insert_product(nome, preco)
     model.close_connection()
-    return novo_id
+    return novo_produto
 
 def atualizar_produto(produto_id, nome, preco):
     model = ProdutoModel()
